@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>PerfectScrollbar</title>
+
+      <link href="./perfect-scrollbar.css" rel="stylesheet" />
+
+      <script src="./perfect-scrollbar.js"></script>
+      <link rel="stylesheet" href="./test.css" />
+   </head>
+   <body>
+      <!-- 
+            << Perfect Scrollbar >>
+
+            원작자 utatti가 만든 오픈소스 MIT 라이선스 라이브러리로,
+            new PerfectScrollbar(부모박스명) 형태로 가져와 사용할 수 있다.
+            부모박스명은 
+               const container = document.querySelector('.scroll-container'); 
+               const ps = new PerfectScrollbar(container); 
+            과 같이 변수로 저장하여 불러와도 되고,
+               new PerfectScrollbar('#부모박스 아이디명') 
+            과 같이 아이디명을 가져와 적용시킬 수도 있다.
+
+            더 자세한 내용은 stylesheet.css와 test.css, test.js에 정리되어있다.
+
+            Git - https://github.com/mdbootstrap/perfect-scrollbar 
+      -->
+      <div class="scroll-container" id="container">
+         <p>긴 내용이 들어가는 박스입니다.</p>
+         <div
+            style="background-color: pink; width: 600px; height: 1000px"
+         ></div>
+      </div>
+      <p>Axis: <span id="axis"></span></p>
+      <p>Direction: <span id="direction"></span></p>
+      <p>Reach event: <span id="reach-event"></span></p>
+      <p>Reach state: <span id="reach-state"></span></p>
+      <script src="./test.js"></script>
+   </body>
+</html>
