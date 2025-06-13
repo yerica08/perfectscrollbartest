@@ -1,0 +1,17 @@
+/* 
+ * 스크롤바 부모 박스(클래스명 임의 지정)
+ * scroll-container가 기본 static일 경우 내부 스크롤바의 absolute가 layout에 영향을 주기 때문에 사용하면 안됨.
+ * overflow는 무조건 hideden
+ * height: 100%, min-height: 100% 요소가 존재하면 스크롤바가 부모 크기를 참조하기 때문에 무한 확장될 수 있음.
+ * *주의*
+ * !! 스크롤이 생기는 요소에는 border를 쓰면 안됨. scrollHeight 계산에 오류가 생겨 계속 스크롤 가능한 영역이 있다고 판단함.
+ */
+#container {
+   position: relative;
+   top: 0;
+   left: 50%;
+   width: 300px;
+   height: 500px;
+   overflow: hidden; /* 기본 스크롤 숨김 */
+   /* 여기에 border 쓰면 안됨*/
+}
